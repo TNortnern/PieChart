@@ -1,0 +1,15 @@
+.modal-custom {
+    background-color: white;
+    border-radius: 3px;
+    padding: 15px;
+    width: 50vw;
+}
+
+.modal__close {
+    float: right;
+    font-size: 26px;
+    cursor: pointer;
+    &:hover {
+        color: red;
+    }
+}
