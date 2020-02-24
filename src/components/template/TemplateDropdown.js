@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { selectTemplate } from "../actions";
+import { selectTemplate } from "../../actions";
 
 const TemplateDropdown = () => {
   const templates = useSelector(state => state.templates);
@@ -14,7 +14,7 @@ const TemplateDropdown = () => {
           }}
           className="custom-select"
         >
-          <option defaultValue>Choose...</option>
+          <option defaultValue>Choose Template...</option>
           {templates.map(template => (
             <option key={template} value={template}>{template}</option>
           ))}

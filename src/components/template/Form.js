@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import TemplateInput from "./TemplateInput";
-import { Button, Alert } from "reactstrap";
-import { newProduct } from "../actions";
+import { Button, UncontrolledAlert } from "reactstrap";
+import { newProduct } from "../../actions";
 
 const Form = () => {
   const [name, setName] = useState("");
@@ -19,9 +19,9 @@ const Form = () => {
     e.preventDefault();
     const nameExists = products.find(product => product.name === name);
     if (nameExists) {
+      setAlertClass("danger")
       const tempName = name;
       setMessage(`${tempName} already exists.`);
-      setAlertClass("danger")
       return;
     }
     const tempName = name;
@@ -36,9 +36,6 @@ const Form = () => {
     };
     dispatch(newProduct(product));
     clearForm();
-    setTimeout(() => {
-      setMessage("");
-    }, 1500);
   };
 
   const clearForm = () => {
@@ -50,13 +47,9 @@ const Form = () => {
   };
   return (
     <>
-      {message ? (
-        <Alert className="text-center" color={alertClass}>
+        <UncontrolledAlert isOpen={message ? true : false} toggle={() => setMessage('')} className="text-center" color={alertClass}>
           {message}
-        </Alert>
-      ) : (
-        ""
-      )}
+        </UncontrolledAlert>
       <form onSubmit={e => handleNewProduct(e)}>
         <TemplateInput name="Product Name" setValue={setName} value={name} />
         <TemplateInput

@@ -1,4 +1,4 @@
-const templates = ["Revenue", "Amount Sold", "Viewed", "Wishlisted", "Reviews"];
+const templates = ["Sales Revenue", "Amount Sold", "Viewed", "Ad Revenue"];
 
 const templatesReducer = (state = templates, { type, payload }) => {
   switch (type) {

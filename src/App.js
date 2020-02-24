@@ -1,6 +1,6 @@
 import React from "react";
-import Template from "./components/Template";
-import Results from "./components/Results";
+import Template from "./components/template/Template";
+import Results from "./components/results/Results";
 
 const App = () => {
   return (
