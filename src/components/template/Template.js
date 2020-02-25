@@ -22,6 +22,7 @@ const Template = () => {
         ""
       )}
       <div className="template__datatable">
+        <h4>Products</h4>
         <ul className="list-group">
           {products.length
             ? products.map(product => (
@@ -33,18 +34,19 @@ const Template = () => {
                   <p>Views: {product.views}</p>
                 </li>
               ))
-            : ""}
+            : 
+            <h6>Add products to show results</h6>
+            }
         </ul>
       </div>
 
       <Button
         onClick={() => showProductModal(true)}
-        className="mb-3 d-block"
+        className="mb-3 mt-4 d-block"
         color="primary"
       >
         Add Product
       </Button>
-      <Button color="success">Submit</Button>
     </div>
   );
 };

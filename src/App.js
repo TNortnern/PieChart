@@ -4,10 +4,17 @@ import Results from "./components/results/Results";
 
 const App = () => {
   return (
-    <div className="app d-flex justify-content-center mt-4">
-      <Template />
-      <Results />
-    </div>
+    <>
+      <div class="container">
+        <div class="jumbotron jumbotron-fluid text-center">
+          <h1 class="display-4">Product Chart App</h1>
+        </div>
+      </div>
+      <div className="app d-flex justify-content-center mt-4">
+        <Template />
+        <Results />
+      </div>
+    </>
   );
 };
 
