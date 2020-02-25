@@ -24,7 +24,7 @@ const Results = () => {
           <BarChart data={dataRender()} />
         </div>
       ) : (
-        ""
+        <h2>No products found.</h2>
       )}
     </div>
   );

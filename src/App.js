@@ -10,7 +10,7 @@ const App = () => {
           <h1 class="display-4">Product Chart App</h1>
         </div>
       </div>
-      <div className="app d-flex justify-content-center mt-4">
+      <div className="app d-flex justify-content-center flex-wrap mt-4">
         <Template />
         <Results />
       </div>

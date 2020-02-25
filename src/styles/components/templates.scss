@@ -1,6 +1,13 @@
 .template {
     width: 45%;
+    @media screen and (max-width: 800px) {
+        width: 100%;
+        border-right: 1px solid black;
+    }
 }
 .list-group {
     width: 600px;
+    @media screen and (max-width: 800px) {
+        width: 100%;
+    }
 }
